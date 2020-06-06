@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bfs & Profundidade</title>
+	<style>
+		table{
+			border-collapse: collapse;
+			border: 2px solid #000;
+			background-color: purple;
+		}
+
+		td{
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			border: 1px solid #FFF;
+			vertical-align: center;
+			font-family: monospace;
+			font-size: 18px;
+			font-weight: bold;
+			position: relative;
+		}
+
+		.pixel-index{
+			font-size: 10px;
+			display: inline-block;
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			color: #FFD700;
+		}
+
+		td.pixel{
+			width: 15px;
+			height: 15px;
+			border: 0;
+		}
+
+		body{
+			margin: auto;
+  			width: 90%;
+  			padding: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div style="align-content: center;"><label for="numberRow">Rows:</label>
+		<input type="number" id="numberRow" name="numberRow" min="1" max="500"><br/>
+		<label for="numberCol">Cols:</label>
+		<input type="number" id="numberCol" name="numberCol" min="1" max="500"> <br/>
+		<label for="map">Map:</label>
+		<input type="text" id="map" name="map">
+		<button onclick="load(0)" style="padding-top: 5px;">Load Map</button>
+		<button onclick="load(1)" style="padding-top: 5px;">Map 1</button>
+		<button onclick="load(2)" style="padding-top: 5px;">Map 2</button>
+		<button onclick="load(3)" style="padding-top: 5px;">Map 3</button>		
+		<label id="lblWarning" style="color: red;"></label><br/>		
+		<input type="checkbox" id="shortestPath">
+		<label> Exaustive search </label>
+		<button onclick="deepSearch()" style="padding-top: 5px;">Run deep search</button>
+		<button onclick="bestFirstSearch()" style="padding-top: 5px;">Run Best-First</button>
+		<button onclick="debugMode()" style="padding-top: 5px;">Debug Mode</button>
+	 </div>
+	<div id="mapCanvas"></div>
+	<label id="lblExecTime"></label><br/>
+	<script src="TrabIA.js"></script>
+	
+</body>
+</html>
