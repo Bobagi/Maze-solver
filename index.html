@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="public/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maze Solver</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <label for="numberRow">Rows:</label>
+        <input
+          type="number"
+          id="numberRow"
+          name="numberRow"
+          min="1"
+          max="500"
+        />
+      </div>
+      <div>
+        <label for="numberCol">Cols:</label>
+        <input
+          type="number"
+          id="numberCol"
+          name="numberCol"
+          min="1"
+          max="500"
+        />
+      </div>
+      <div>
+        <label for="map">Map:</label>
+        <input type="text" id="map" name="map" />
+        <button onclick="load(0)" style="padding-top: 5px">Load Map</button>
+        <label id="lblWarning" style="color: red"></label>
+      </div>
+      <div>
+        <button onclick="load(1)" style="padding-top: 5px">Map 1</button>
+        <button onclick="load(2)" style="padding-top: 5px">Map 2</button>
+        <button onclick="load(3)" style="padding-top: 5px">Map 3</button>
+      </div>
+      <div>
+        <input type="checkbox" id="shortestPath" />
+        <label> Exaustive search </label>
+        <button onclick="deepSearch()" style="padding-top: 5px">
+          Run deep search
+        </button>
+        <button onclick="bestFirstSearch()" style="padding-top: 5px">
+          Run Best-First
+        </button>
+        <button onclick="hill_climbing()" style="padding-top: 5px">
+          Run Hill Climbing
+        </button>
+        <button onclick="debugMode()" style="padding-top: 5px">
+          Debug Mode
+        </button>
+      </div>
+      <div style="display: flex" id="mapCanvas"></div>
+      <label id="lblExecTime"></label>
+    </div>
+  </body>
+  <script src="solver.js"></script>
+</html>
