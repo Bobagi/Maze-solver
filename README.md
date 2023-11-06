@@ -1,12 +1,12 @@
 # Maze-Solver
 
-## Overview
 "Maze-Solver" is an interactive application designed to visually demonstrate the intricacies and strategies of various algorithmic approaches to solving mazes. It is crafted using JavaScript and leverages the HTML grid system for graphical representation. This educational tool is particularly developed for classes at the University of São Paulo (USP) and showcases the differences and efficiencies between three distinct maze-solving strategies:
 
 1. **Depth-First Search (DFS)**
 2. **Best-First Greedy Search**
 3. **Hill-Climbing Method**
 
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 ## Features
 
 - **Interactive Maze Grid**: The HTML grid system allows users to visually experience each step of the maze-solving process, offering real-time graphical feedback that is easy to understand and follow.
